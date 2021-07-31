@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+:root{
+    --vdgBlue: hsl(217, 19%, 35%);
+    --ddBlue: hsl(214, 17%, 51%);
+    --gBlue: hsl(212, 23%, 69%);
+    --lgBlue: hsl(210, 46%, 95%);
+}
+
+*,html{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-size:10px;
+    font-family: 'Manrope', sans-serif;
+}
+
+html{
+    /* https://carlospwd-article-preview-component.netlify.app/ */
+    height:100vh;
+}
+
+body{
+    height:100%;
+}
+
+main{
+    width:100%;
+    height:100%;
+    background: var(--lgBlue);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.card{
+    display: flex;
+    height: 30%;
+    min-height: 300px;
+    max-width:750px;
+    background:white;
+    border-radius: 1rem;
+}
+
+.img-container{
+    height:100%;
+    min-width:300px;
+    background: url('../img/fm_article_preview/drawers.jpg');
+    background-position: center left;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+}
+
+.content-container{
+    padding: 2.5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container > h1{
+    font-size:2rem;
+    color: var(--vdgBlue);
+    font-weight: 700;
+}
+
+.content-container > p{
+    color: var(--ddBlue);
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 2rem 0;
+}
+
+.content-bottom-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.person-info{
+    display: flex;
+}
+
+.person-info > img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+
+.person-details{
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.person-details > h1{
+    font-size: 1.3rem;
+    color: var(--vdgBlue);
+}
+
+.person-details > p{
+    color: var(--ddBlue);
+    font-size: 1.2rem;
+}
+
+.share-container{
+    position:relative;
+    padding: 1.2rem;
+    background: var(--lgBlue);
+    border-radius: 50%;
+    cursor:pointer;
+
+    transition: all 0.3s ease;
+}
+
+.share-container{
+    z-index:100;
+}
+
+.share-container:hover{
+    background: var(--gBlue);
+}
+
+.share-content{
+    background: var(--vdgBlue);
+}
+
+.active-desktop{
+    position: absolute;
+    top:-120%;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.desktop-share-content{
+    position: relative;
+    width:200px;
+    border-radius: 0.5rem;
+    background:var(--vdgBlue);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.desktop-share-content > h1{
+    text-transform: uppercase;
+    color: var(--ddBlue);
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+}
+
+.icon{
+    width:13px;
+    height:13px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.face{
+    background-image: url('../img/fm_article_preview/icon-facebook.svg');
+}
+
+.twitter{
+    background-image: url('../img/fm_article_preview/icon-twitter.svg');
+}
+
+.pint{
+    background-image: url('../img/fm_article_preview/icon-pinterest.svg');
+}
+
+.desktop-point{
+    position: absolute;
+    background:var(--vdgBlue);
+    width:10px;
+    height:10px;
+    transform: rotate(45deg);
+    bottom:-10%;
+}
+
+.mobile-hidden{
+    display: none;
+}
+
+.desktop-hidden{
+    display: block;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.active-mobile{
+    width:100%;
+    height:75px;
+    background: var(--vdgBlue);
+    position: absolute;
+    display: none;
+    align-items: center;
+    bottom:0;
+    left:0;
+    border-radius: 0 0 1rem 1rem;
+}
+
+@media screen and (max-width:1200px){
+    main{
+        padding: 0 5%;
+    }
+    .card{
+        min-height:300px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .card{
+        flex-direction:column;
+        max-width:300px;
+        min-height: auto;
+        height:auto;
+        position:relative;
+    }
+    .img-container{
+        height:200px;
+        background:url('../img/fm_article_preview/drawers.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    .img-container > img{
+        display: none;
+    }
+    .content-container{
+        padding: 3rem;
+        padding-bottom:1.5rem;
+    }
+    .share-container{
+        padding:0.9rem;
+    }
+    .active-mobile{
+        display: flex;
+    }
+    .desktop-hidden{
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px){
+    *,html{
+        font-size: 8px;
+    }
+}

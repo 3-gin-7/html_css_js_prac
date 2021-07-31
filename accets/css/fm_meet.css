@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+:root{
+    --bg-purple:rgb(133, 95, 177);
+    --bg-green:rgb(77, 150, 168);
+    --txt-light-grey:rgb(135, 135, 157);
+    --bg-light-green:rgb(143, 227, 249);
+}
+
+*,html{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+
+    font-size:10px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding:4rem 0px;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+}
+
+.header-container > p{
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-left: 0.8rem;
+}
+
+.logo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo-circle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.logo-circle-1{
+    grid-row: 1;
+    grid-column: 2;
+
+    background: var(--bg-purple);
+}
+
+.logo-circle-2{
+    grid-row:2;
+    grid-column: 1;
+
+    background: var(--bg-green);
+}
+
+.first-section-container{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    overflow-x:hidden;
+    justify-items: center;
+}
+
+.first-section-hero-1{
+    margin-left: -10%;
+}
+
+.first-section-hero-2{
+    margin-right: -10%;
+}
+
+.first-section-text-container{
+    text-align: center;
+    width: 80%;
+}
+
+.first-section-text-container h1{
+    font-size: 7rem;
+    font-weight: bold;
+    line-height: 5rem;
+    padding: 0.5rem;
+}
+
+.first-section-text-container p{
+    font-size: 2rem;
+    padding: 5rem 0px;
+    color: var(--txt-light-grey);
+    font-weight: bold;
+}
+
+.first-section-button-container button:first-child{
+    margin-right: 2rem;
+}
+
+.round-button{
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+    padding: 1.5rem 2.5rem;
+    border-radius: 500px;
+    border:none;
+}
+
+.round-button *{
+    font-size: 1.8rem;
+    color: var(--bg-light-green);
+    font-weight: bold;
+}
+
+.bg-green{
+    background: var(--bg-green);
+}
+
+.bg-purple{
+    background: var(--bg-purple);
+}
+
+.separator{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4rem;
+}
+
+.separator > div{
+    display: flex;
+}
+
+.separator-line{
+    width:1px;
+    height:10rem;
+    border-right: 2px rgb(236, 236, 236) solid;
+    position:relative;
+}
+
+.separator-circle{
+    font-size: 1.8rem;
+    color: var(--txt-light-grey);
+    border: 1px rgb(231, 231, 231) solid;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%) translateY(50%);
+    width: 5rem;
+    height:5rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background:white;
+}
+
+.second-section{
+    padding-top: 8rem;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.image-container > img{
+    width: 25rem;
+    border-radius: 1rem;
+}
+
+.image-container > img:not(:last-child){
+    margin-right: 2rem;
+}
+
+.second-section-text-container{
+    padding: 5rem 0px;
+    text-align: center;
+    width: 29%;
+    margin:auto;
+}
+
+.second-section-text-container h2{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: var(--bg-green);
+    font-weight: bold;
+}
+
+.second-section-text-container h1{
+    font-size: 4rem;
+    padding: 2.5rem 0px;
+}
+
+.second-section-text-container p{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: grey;
+}
+
+.third-section{
+    background: linear-gradient(#4d96a8d8, #4d96a8d8), url('../img/fm_meet/desk-image-footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.third-section-container{
+    width:80%;
+    margin:auto;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30rem;
+}
+
+.third-section-slogan-container{
+    width: 23%;
+}
+
+.third-section-slogan-container h1{
+    font-size: 4rem;
+    color:white;
+}
+
+.third-section-description-container{
+    width: 23%;
+}
+
+.third-section-description-container p{
+    font-size: 1.8rem;
+    color:white;
+}
+
+
+
+@media screen and (max-width:800px){
+    *,html{
+        font-size: 8px;
+    }
+    .first-section-container{
+        grid-template-columns: 1fr 1fr;
+        overflow-x:hidden;
+        justify-items: center;
+    }
+
+    .first-section-text-container{
+        grid-row: 2;
+        grid-column: 1/3;
+        padding-top: 5rem;
+        width:55%;
+    }
+
+    .image-container > img{
+        width: 20rem;
+    }
+
+    .second-section-text-container{
+        width: 55%;
+    }
+
+    .third-section-container{
+        width: 100%;
+        height: auto;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem 0px;
+    }
+
+    .third-section-slogan-container{
+        width:50%;
+        padding: 3rem 0px;
+    }
+
+    .third-section-description-container{
+        width:60%;
+    }
+
+    .third-section-button-container{
+        padding: 3rem 0px;
+    }
+}
+
+@media screen and (max-width:400px){
+    *,html{
+        font-size: 6px;
+    }
+    .first-section-container > div > img{
+        width:100%;
+        height:100%;
+    }
+    
+    .image-container{
+        display: grid;
+        grid-template-columns:repeat(2, auto);
+        gap:2rem;
+    }
+
+    .image-container > img:not(:last-child){
+        margin-right: 0rem;
+    }
+
+}

@@ -1,0 +1,96 @@
+*,html{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-size:16px;
+    color:#926239
+}
+
+html,body{
+    height:100%;
+}
+
+.first-section{
+    width:100%;
+    height:100%;
+    background: url('../img/beach-site/beachshowcase.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.first-content{
+    text-align:center;
+}
+
+.first-content h1{
+    font-size:50px;
+}
+
+.first-content p{
+    font-size:20px;
+}
+
+.first-content button{
+    background:transparent;
+    border: 1px solid #926239;
+    padding:10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size:1.2rem;
+    cursor:pointer;
+
+    transition:all 0.3s ease;
+}
+
+.first-content button:hover{
+    background:#926239;
+    color:white;
+}
+
+.second-section{
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+.second-section div{
+    text-align: center;
+    padding:20px;
+    font-size:17px;
+    line-height:1.6;
+}
+
+.second-section div:nth-child(odd){
+    background: #926239;
+    color:white;
+}
+
+.third-section{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.third-section div{
+    padding:20px;
+    font-size:17px;
+    line-height:1.6;
+}
+
+.third-section div:nth-child(odd){
+    background: #926239;
+    color:white;
+}
+
+@media screen and (max-width:1000px){
+    *,html{
+        font-size:14px;
+    }
+    .third-section{
+        grid-template-columns: 1fr;
+    }
+}
+

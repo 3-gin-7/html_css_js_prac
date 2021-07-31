@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500&display=swap');
+
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --vary-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+*,html{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-size: 10px;
+
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    height:100vh;
+
+    padding: 10% 20%;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card{
+    padding: 5.3rem;
+}
+
+.card-sedan{
+    background: var(--bright-orange);
+}
+
+.card-sedan > button{
+    color: var(--bright-orange);
+}
+
+.card-suv{
+    background: var(--dark-cyan);
+}
+
+.card-suv > button{
+    color: var(--dark-cyan);
+}
+
+.card-luxury{
+    background: var(--vary-dark-cyan);
+}
+
+.card-luxury > button{
+    color: var(--vary-dark-cyan);
+}
+
+.card > h1{
+    font-size: 4.1rem;
+    text-transform:uppercase;
+    margin: 3rem 0px;
+    color: rgb(231, 231, 231);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.card > p{
+    font-size: 1.5rem;
+    color:var(--paragraphs);
+
+    line-height: 2.5rem;
+    margin-bottom:4rem;
+}
+
+.card > button{
+    margin-top: 4rem;
+    text-align: center;
+
+    padding: 1.2rem 3rem;
+    font-size: 1.5rem;
+    border:none;
+    border-radius: 100px;
+    background: var(--background-headings-buttons);
+    border: 2px var(--background-headings-buttons) solid;
+
+    transition: all 0.1s ease;
+}
+
+.card > button:hover{
+    background:transparent;
+    color: var(--background-headings-buttons);
+}
+
+@media screen and (max-width:1400px){
+    body{
+        padding: 0px
+    }
+
+    .card-container{
+        margin: 20% 5%;
+        grid-template-columns: 1fr;
+    }
+}
+

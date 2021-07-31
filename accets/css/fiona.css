@@ -1,0 +1,162 @@
+*,html{
+    font-size: 16px;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.bg{
+    width:100%;
+    height:100vh;
+    background-image: url('../../img/fiona/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.center-content{
+    display:flex;
+    flex-direction:column;
+    align-items: center;   
+}
+
+.center-content img{
+    margin-top: 10px;
+    background-color: transparent;
+    color:white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.center-content img:hover{
+    transform:scale(1.1);
+}
+
+.main-heading{
+    font-size:5.1rem;
+    color:white;
+    font-weight: bold;
+}
+
+.scroll-box{
+    width:50px;
+    height:50px;
+    background:white;
+}
+
+.tribute-content{
+    width:100%;
+    background:black;
+    padding: 5% 10%;
+}
+
+.content-heading-container{
+    color:white;
+}
+
+.content-heading-container h1{
+    font-size:2.5rem;
+    font-weight: 100;
+}
+
+.content{
+    display:flex;
+    flex-direction:row;
+    color:rgb(170, 170, 170);
+    padding:20px;
+}
+
+.content-text{
+    flex:65;
+    padding-right: 30px;
+}
+
+.content-text p{
+    margin-bottom: 10px;
+}
+
+.content-text a{
+    text-decoration: none;
+    color:white;
+}
+
+.content-img{
+    flex:35;
+    width:10%;
+    height:70%;
+}
+
+.dis-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color:white;
+    margin-top:30px;
+}
+
+.dis .title{
+    text-align:center;
+    font-size:1.2rem;
+    font-weight: bold;
+    padding: 8px 0px;
+}
+
+.dis img{
+    cursor: pointer;
+    width:250px;
+    height:250px;
+    border-radius: 5px;
+
+    transition: all 0.15s ease;
+}
+
+.dis img:hover{
+    transform:scale(1.02)
+}
+
+@media screen and (max-width:1200px){
+    *,html{
+        font-size:14px;
+    }
+
+    .center-content img{
+        display: none;
+    }
+
+    .content-text, .content-text p{
+        font-size:1.1rem;
+    }
+
+    .content-img{
+        display: none;
+    }
+
+    .dis-content{
+        flex-direction:column;
+    }
+
+    .dis{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom:30px;
+    }
+
+    .dis .title{
+        font-size:1.8rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    *,html{
+        font-size:12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    *,html{
+        font-size:10px;
+    }
+}

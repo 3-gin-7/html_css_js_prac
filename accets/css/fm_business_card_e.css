@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+    --bg-dark-0: #090b1a;
+    --bg-dark-1: #1b1938;
+    --txt-clr-purple: #9015e2;
+}
+
+
+*,html{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 10px;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background: var(--bg-dark-0);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+}
+
+main{
+    width:100%;
+    display: flex;
+    border-radius: 1rem;
+    overflow:hidden;
+}
+
+.first-card-section{
+    flex:1;
+    flex-grow: 0;
+    flex-basis: 50%;
+    padding: 7rem;
+    background: var(--bg-dark-1);
+}
+
+.first-card-section h1{
+    color: white;
+}
+
+.first-card-section p{
+    color: grey;
+}
+
+.first-card-inner-container{
+    width:95%;
+}
+
+.first-card-text-container > h1, span{
+    font-size: 5rem;
+}
+
+.first-card-text-container > h1 > span{
+    color: var(--txt-clr-purple);
+}
+
+.first-card-text-container > p{
+    font-size: 1.5rem;
+    padding: 2rem 0px;
+    line-height: 2.5rem;
+}
+
+.first-card-info-container{
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+    margin-top: 3rem;
+}
+
+.first-card-info-container h1{
+    font-size: 4rem;
+}
+
+.first-card-info-container p{
+    font-size: 1.5rem;
+}
+
+.second-card-section{
+    flex:1;
+    flex-grow: 0;
+    flex-basis: 50%;
+}
+
+.second-card-section-image{
+    width: 100%;
+    height:100%;
+    background: linear-gradient(rgba(99, 6, 161, 0.5), rgba(99, 6, 161, 0.5)), url(../img/fm_business_card/image-header-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1400px){
+    body{
+        height: 100%;
+    }
+    main{
+        flex-direction: column-reverse;
+        border-radius: 2.5rem;
+    }
+    .first-card-section{
+        flex-basis: auto;
+        padding: 7rem 6rem;
+        text-align: center;
+    }
+
+    .first-card-inner-container{
+        width:100%;
+    }
+
+    .first-card-inner-container p{
+        font-size: 2.3rem;
+        line-height: 3.5rem;
+    }
+
+    .first-card-info-container{
+        flex-direction: column;
+    }
+
+    .first-card-info-container > div{
+        padding: 2rem 0px;
+    }
+
+    .second-card-section{
+        flex-basis: auto;
+    }
+
+    .second-card-section-image{
+        height: 200px;
+    }    
+}
+
+@media only screen and (max-width:800px){
+   html{
+       font-size: 8px;
+   } 
+}
+
+@media only screen and (max-width:600px){
+    html{
+        font-size: 6px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    html{
+        font-size: 5px;
+    }
+}
+
+
+

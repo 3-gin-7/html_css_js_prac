@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+:root{
+    --clr-dark-cyan: hsl(185, 75%, 39%);
+    --clr-dark-blue: hsl(229, 23%, 23%);
+    --clr-grayish-blue: hsl(227, 10%, 46%);
+    --clr-dark-gray: hsl(0, 0%, 59%);
+}
+
+*,html{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-size:10px;
+
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    height:100%;
+}
+
+main{
+    height:100%;
+    background: var(--clr-dark-cyan);
+    position:relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    width:60%;
+}
+
+.circle img{
+    width:100%;
+    height:100%;
+}
+
+
+.top-circle{
+    position:absolute;
+    top:0;
+    left:0;
+    transform: translateY(-40%) translateX(-20%);
+}
+
+.bot-circle{
+    position: absolute;
+    bottom:0;
+    right:0;
+    transform: translateY(50%) translateX(20%);
+}
+
+.card{
+    width:25%;
+    max-width:700px;
+    min-width:400px;
+    background: white;
+    z-index:1;
+    border-radius: 2rem;
+    overflow:hidden;
+}
+
+.top-card{
+    width:100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    background: url('../img/fm_profile_card/bg-pattern-card.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-card img{
+    margin-top:6rem;
+    transform:translateY(50%);
+    border-radius: 50%;
+    border: 5px solid white;
+    width:130px;
+}
+
+.personal-details{
+    text-align: center;
+    padding-top:20%;
+    padding-bottom:10%;
+}
+
+.personal-details > h1, span{
+    font-size: 2.4rem;
+}
+
+.personal-details > h1 > span{
+    color: var(--clr-grayish-blue);
+    font-weight: 300;
+}
+
+.personal-details > p{
+    font-size: 1.8rem;
+    font-weight:300;
+    padding: 2rem;
+}
+
+.social-media{
+    border-top: 1px solid rgb(199, 199, 199);
+    display: flex;
+    justify-content: space-around;
+    padding:3rem;
+}
+
+.social-media > div{
+    text-align:center;
+}
+
+.social-media > div > h1{
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.social-media > div > p{
+    color: var(--clr-grayish-blue);
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+@media screen and (max-width:800px){
+    *,html{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .card{
+        width:90%;
+        min-width: unset;
+    }
+
+    .top-card img{
+        margin-top:6rem;
+        transform:translateY(50%);
+        border-radius: 50%;
+        border: 5px solid white;
+        width:100px;
+    }
+}
+

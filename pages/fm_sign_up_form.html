@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form</title>
+    <link rel="stylesheet" href="../accets/css/fm_sign_up_form.css">
+    <script src="../accets/js/fm_sign_up_form/index.js"></script>
+</head>
+<body>
+    <main>
+        <section class="main-content-container">
+            <div class="left-section">
+                <div class="left-section-text-container">
+                    <h1>Learn to code by watching others</h1>
+                    <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="card-container">
+                    <div class="try-card">
+                        <p><span>Try it free 7 days</span> then
+                            $20/mo. thereafter</p>
+                    </div>
+                    <div class="main-card">
+                        <form class="form-container">
+                            <input name="fname" type="text" placeholder="First Name">
+                            <input name="sname" type="text" placeholder="Last Name">
+                            <input name="email" type="email" placeholder="Email Address">
+                            <input name="password" type="password" placeholder="Password">
+                            <button type="button" onclick="submitForm()">claim your free trial</button>
+                        </form>
+                        <p id="error_message"></p>
+                        <p id="success_message"></p>
+                        <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

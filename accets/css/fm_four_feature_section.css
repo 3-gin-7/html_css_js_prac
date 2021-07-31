@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+*,html{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif
+}
+
+html{
+    height:100%;
+}
+
+body{
+    height:100%;
+}
+
+main{
+    padding:2% 8%;
+    width:100%;
+    min-height:100%;
+    background: var(--Very-Light-Gray);
+    display: flex;
+    flex-direction:column;
+}
+
+header{
+    text-align: center;
+}
+
+header > h1{
+    font-size: 4rem;
+}
+
+.heading-1{
+    font-weight:200;
+    color: var(--Grayish-Blue);
+}
+
+.heading-2{
+    font-weight:400;
+    color: var(--Very-Dark-Blue);
+}
+
+header > p{
+    font-size:1.6rem;
+    color: var(--Grayish-Blue);
+    width:45%;
+    margin:auto;
+    margin-top: 2rem;
+}
+
+.main-content-container{
+    flex-grow: 1;
+    display: flex;
+    margin-top:3rem;
+}
+
+.col{
+    flex:1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mid-col .card:first-child{
+    margin-bottom:4rem;
+}
+
+.card{
+    background:white;
+    width:90%;
+    padding:4rem;
+    padding-bottom: 2rem;
+    border-radius: 0.5rem;
+
+    box-shadow: 0px 10px 10px -1px hsla(212, 86%, 64%, 0.267);
+}
+
+.card > div:last-child{
+    display: flex;
+    justify-content: flex-end;
+    padding: 3rem 0 1rem 0;
+}
+
+.card h1{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+
+.card p{
+    margin-top:1rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+}
+
+.border-cyan{
+    border-top:0.5rem solid var(--Cyan);
+}
+
+.border-red{
+    border-top:0.5rem solid var(--Red);
+}
+
+.border-orange{
+    border-top:0.5rem solid var(--Orange);
+}
+
+.border-blue{
+    border-top:0.5rem solid var(--Blue);
+}
+
+.mid-col{
+    display: flex;
+    flex-direction:column;
+}
+
+@media screen  and (max-width:1200px){
+    main{
+        padding-top: 10rem;
+    }
+    .main-content-container{
+        display: block;
+    }
+    .card{
+        margin-bottom:4rem;
+    }
+}
+
+@media screen and (max-width:800px){
+    *,html{
+        font-size:8px;
+    }
+    header > p{
+        width:100%;
+    }
+}
+
+@media screen and (max-width:400px){
+    *,html{
+        font-size:6px;
+    }
+}
+
+
+
+

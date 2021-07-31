@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap');
+
+:root{
+    --greenish: #54e6af;
+    --lt-blueish: #5a668a;
+    --md-blueish: #2c344b;
+    --dk-blueish: #121725;
+    --greyish: #c2cbe5;
+    --white: #ffffff;
+}
+
+*,html{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-size:10px;
+
+    font-family: 'Chivo', sans-serif;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    min-height: 100%
+}
+
+main{
+    min-height:100vh;
+    background: var(--dk-blueish);
+    padding:7.5% 0 5% 15%;
+}
+
+.main-container{
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container{
+    transform: translateY(-5%);
+}
+
+.host-img-mobile{
+    display: none;
+}
+
+.dots-container{
+    position:absolute;
+    bottom:0;
+    right:0;
+    transform: translateY(50%);
+}
+
+.main-text-container{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:60%;
+    background: var(--dk-blueish);
+    padding: 7% 5% 0 0;
+}
+
+.main-text-container > h1, span{
+    font-size: 5.2rem;
+    line-height:6.2rem;
+    font-weight:100;
+
+    text-transform: uppercase;
+}
+
+.main-text-container > h1{
+    color: var(--greenish);
+}
+
+.main-text-container > h1 > span{
+    color: var(--white);
+}
+
+.middle-content-container{
+    width:62%;
+    margin:2rem 0px;
+}
+
+.middle-content-container > p{
+    color: var(--greyish);
+    font-size:1.8rem;
+    font-weight:100;
+    line-height:2.8rem;
+
+}
+
+.middle-content-container > form{
+    margin: 4rem 0px;
+    background: var(--md-blueish);
+    
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 100px;
+    padding:5px;
+    padding-left: 2rem;
+}
+
+.middle-content-container > form > input{
+    font-size: 1.8rem;
+    border:none;
+    background:transparent;
+
+    color: var(--lt-blueish);
+}
+
+.middle-content-container > form > input:focus{
+    border: none;
+    outline: none;
+}
+
+.middle-content-container > form > button{
+    border:none;
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+    border-radius: 100px;
+    background: var(--greenish);
+    font-weight: 700;
+    
+    cursor: pointer;
+}
+
+.middle-content-container > form > button:hover{
+    background: #82e4cf;
+}
+
+.podcast-logo-container{
+    width:75%;
+    margin-top:4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:3rem;
+    align-items: center;
+}
+
+.podcast-logo-container > img{
+    width:100%;
+}
+
+
+
+
+@media screen and (max-width:800px){
+    *,html{
+        font-size: 8px;
+    }
+    main{
+        padding: 0;
+        padding-left:5%; 
+    }
+    .logo-container{
+        flex:1;
+        transform: translateY(8%);
+    }
+    .host-img-desktop{
+        display: none;
+    }
+
+    .host-img-mobile{
+        display: block;
+        flex:2;
+    }
+
+    .host-img-mobile > img{
+        width:100%;
+        height:100%;
+    }
+
+    .dots-container{
+        display: none;
+    }
+
+    .main-text-container{
+        width:80%;
+    }
+}
+
+@media screen and (max-width:600px){
+    *,html{
+        font-size:5px;
+    }
+    .host-img-mobile{
+        display: none;
+    }
+    main{
+        background: linear-gradient(#121725b6, #121725b6), url('../img/fm_pod_landing/mobile-image-host.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main-container{
+        flex-direction:column;
+        align-items: center;
+    }
+    .main-text-container{
+        position:static;
+        width:100%;
+    }
+    .logo-container{
+        margin: 20% 0px;
+    }
+    .main-text-container{
+        background:transparent;
+        text-align: center;
+    }
+    .middle-content-container{
+        width:100%;
+    }
+    .middle-content-container > p{
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+    .podcast-logo-container{
+        width:100%;
+        margin-top:7rem;
+    }
+    .middle-content-container>form{
+        padding:0;
+        flex-direction: column;
+        background: transparent;
+    }
+    .middle-content-container>form>input{
+        background:var(--md-blueish);
+        border-radius: 100px;
+        padding:10px;
+        padding-left: 2rem;
+        margin-bottom:2rem;
+    }
+    .middle-content-container>form>button{
+        padding:2rem;
+    }
+
+}

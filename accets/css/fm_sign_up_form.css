@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #eee;
+    --bs-dark: #212529;
+
+    --bg-clr: hsl(0, 100%, 74%);
+}
+
+*,html{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-size:10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    min-height:100%;
+    height:1px;
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    background-image: url('../img/fm_sign_up_form/bgintrodesktop.png');
+    background-color: var(--bg-clr);
+    padding: 7% 10%;
+    min-height: 100%;
+}
+
+.main-content-container{
+    display: flex;
+    flex-direction:row;
+    height:100%;
+    min-height: inherit;
+}
+
+.left-section{
+    display: flex;
+    flex:1;
+    align-items: center;
+}
+
+.left-section-text-container{
+    color: var(--bs-white);
+    padding-right: 2rem;
+}
+
+.left-section-text-container > h1{
+    font-size: 5.5rem;
+    line-height:5.5rem;
+    margin-bottom:1rem;
+}
+
+.left-section-text-container > p{
+    font-size: 1.7rem;
+    margin-top:4rem;
+}
+
+.right-section{
+    flex:1;
+}
+
+.card-container{
+    display:flex;
+    flex-direction: column;
+    width:90%;
+}
+
+.try-card{
+    background: var(--bs-purple);
+    text-align: center;
+    padding:1.6rem;
+    border-radius: 0.5rem;
+    margin-bottom:2.5rem;
+    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.try-card > p, span{
+    color: var(--bs-white);
+    font-size:1.6rem;
+}
+
+.try-card > p{
+    color: var(--bs-light);
+}
+
+.try-card > p > span{
+    font-weight: 600;
+}
+
+.main-card{
+    display: flex;
+    flex-direction:column;
+    background: var(--bs-white);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 7px 2px rgba(0, 0, 0, 0.2);
+}
+
+.form-container{
+    display: flex;
+    flex-direction:column;
+}
+
+.form-container > input{
+    font-size: 1.5rem;
+    padding:1rem;
+    padding-left:3rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--bs-light);
+    margin-bottom:2rem;
+}
+
+.form-container > input:focus{
+    outline: 2px solid var(--bs-gray);
+}
+
+.form-container > button{
+    background: var(--bs-teal);
+    border:none;
+    border-radius: 0.5rem;
+    color: var(--bs-white);
+    text-transform: uppercase;
+    font-size:1.5rem;
+    padding:1rem;
+    cursor:pointer;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
+
+    transition:all 0.3s ease;
+}
+
+.form-container > button:hover{
+    background: var(--bs-green);
+    color:white;
+}
+
+.main-card > p{
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--bs-secondary);
+}
+
+.main-card > p,a{
+    font-size: 1.4rem;
+}
+
+.main-card >p > a{
+    color: var(--bs-red);
+    transition: all 0.3s ease;
+}
+
+.main-card > p > a:hover{
+    color: var(--bs-orange);
+}
+
+.invalid-input{
+    outline: 3px solid red;
+}
+
+#error_message{
+    color: var(--bs-red);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#success_message{
+    color: var(--bs-teal);
+    font-weight: 600;
+}
+
+@media screen and (max-width:800px){
+    *,html{
+        font-size:9px;
+    }
+    .left-section{
+        height:auto;
+        flex:unset;
+    }
+    .right-section{
+        margin-top:2rem;
+        flex:unset;
+        flex-grow:1;
+        display: flex;
+        align-items: center;
+    }
+    .main-content-container{
+        flex-direction:column;
+        height:100%;
+    }
+    .left-section-text-container{
+        text-align: center;
+    }
+    .card-container{
+        width:100%;
+    }
+}
+
+@media screen and (max-width:400px){
+    *,html{
+        font-size:8px
+    }
+    .left-section-text-container > h1{
+        font-size: 3.2rem;
+    }
+
+    .try-card{
+        padding: 2rem 6rem;
+    }
+}

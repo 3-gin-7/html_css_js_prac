@@ -1,0 +1,610 @@
+:root{
+    --base-text-clr:#001d2f;
+    --secondary-text-clr:#0f866c;
+    --yellow-clr: #d4e300;
+    --map-bg-clr:#fdf3f4;
+}
+
+*,html{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+    font-size:10px;
+    font-family: sans-serif;
+    color: var(--base-text-clr);
+}
+
+body *{
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+.header-container{
+    position: fixed;
+    top:0;
+    width:100%;
+}
+
+.nav-container{
+    height:10rem;
+    width:90%;
+    margin:auto;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+
+    position:relative;
+}
+
+.nav-container > a{
+    display: inline-block;
+    background: url('../img/vpn/expressvpn-logo-red.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4rem;
+    width:20.8rem;
+}
+
+.nav-list{
+    width:60%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100%;
+}
+
+.nav-list > li{
+    cursor: pointer;
+    font-size:1.4rem;
+    font-weight: 500;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list > li:hover{
+    color: var(--secondary-text-clr);
+}
+
+.drop-down-item > a{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.drop-down-item >a::after{
+    content:'';
+    display: block;
+    width:2.6rem;
+    height:10px;
+    background:url('../img/vpn/chevron-down.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-list > li:hover a::after {
+    background:url('../img/vpn/chevron-up.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-list > li:hover .menu-popup{
+    display:block;
+}
+
+.menu-popup{
+    position: absolute;
+    width:60%;
+    left:50%;
+    top:80%;
+    transform: translateX(-50%);
+    border: none;
+    display: none;
+}
+
+.menu-popup:hover{
+    display: block;
+}
+
+.menu-popup h1{
+    color:grey;
+    border-bottom: 2px solid black;
+    padding:1rem 0px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.menu-popup-grid{
+    background:white;
+    display: grid;
+    gap: 3rem;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.vpn-grid{
+    grid-template-columns: 1fr 2fr;
+}
+
+.vpn-grid li{
+    padding:1rem;
+}
+
+.vpn-grid a{
+    font-size:1.5rem;
+}
+
+.vpn-grid-2{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+.vpn-grid-2 > div > ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.product-grid{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.product-grid li{
+    padding:1rem;
+}
+
+.product-grid-tools-list{
+    margin-top:2rem;
+}
+
+.homepage-first-section{
+    background: url('../img/vpn/homepage-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top:10rem;
+}
+
+.homepage-first-section-container{
+    padding:3rem 0px 0px 0px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.homepage-first-section-container > h1{
+    font-size:10rem;
+}
+
+.homepage-first-section-container > h2{
+    font-size: 2.5rem;
+    margin: 2rem 0px;
+}
+
+.homepage-first-section-container > h3 {
+    margin-bottom:2rem;
+}
+
+.homepage-first-button{
+    background:#0f866c;
+    border:none;
+    color:white;
+    border-radius: 5rem;
+    padding: 1.5rem 3rem;
+    margin: 2rem 0px;
+
+    cursor: pointer;
+    font-size:2rem;
+    display:flex;
+    align-items: center;
+
+    transition:all 0.3s ease;
+}
+
+.homepage-first-button::after{
+    content: '';
+    display: inline-block;
+    background:url('../img/vpn/arrow.svg');
+    background-position:center;
+    transform:rotate(90deg);
+    margin-left:1rem;
+    height: 2.4rem;
+    width: 2.4rem;
+
+    transition:all 0.3s ease;
+}
+
+.homepage-first-button:hover{
+    color:var(--base-text-clr);
+    background: var(--yellow-clr);
+}
+
+.homepage-first-button:hover::after{
+    filter:invert(1);
+}
+
+.homepage-first-section-container img{
+    width:572px;
+}
+
+.homepage-second-section{
+    width:65%;
+    margin:auto;
+    padding-top:5rem;
+}
+
+.homepage-second-section > div{
+    margin-bottom:5rem;
+}
+
+.homepage-second-section :nth-child(even) > div:first-child{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.second-section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:8rem;
+}
+
+.second-section-content-img > img{
+    width:90%;
+}
+
+.second-section-content-text{
+    display: flex;
+    align-items: center;
+    padding-top:4rem;
+}
+
+.second-section-content-text h1{
+    font-size: 4rem;
+}
+
+.second-section-content-text p{
+    padding: 2rem 0px;
+    font-size:1.7rem;
+    line-height: 2.7rem;
+}
+
+.second-section-content-link{
+    width:max-content;
+    display: block;
+    background:#0f866c;
+    border:none;
+    color:white;
+    border-radius: 5rem;
+    padding: 1.5rem 3rem;
+
+    margin:3rem 0px;
+
+    cursor: pointer;
+    font-size:2rem;
+
+    transition:all 0.3s ease;
+}
+
+.second-section-content-link:hover{
+    color:var(--base-text-clr);
+    background: var(--yellow-clr);
+}
+
+.animation-link{
+    width:max-content;
+    color:var(--secondary-text-clr);
+    font-size:1.7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    position:relative;
+}
+
+.animation-link::before{
+    content:'>';
+    display:block;
+    height:1.7rem;
+    padding-left:0.5rem;
+}
+
+.animation-link::after{
+    content:'';
+    display: block;
+    position:absolute;
+    bottom:-2px;
+    height:3px;
+    width:100%;
+    background:var(--secondary-text-clr);
+    
+    transition:all 0.3s ease;
+}
+
+.animation-link:hover::after{
+    background:var(--yellow-clr);
+}
+
+.homepage-third-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8rem;
+    width: 75%;
+    margin:auto;
+    padding: 4rem 0px;
+}
+
+.homepage-third-section > div{
+    flex:1;
+    text-align: center;
+}
+
+.homepage-third-section > div >img{
+    width:100%;
+    padding: 2rem 0px;
+}
+
+.homepage-third-section h1{
+    padding: 2rem 0px;
+    font-size:3rem;
+}
+
+.homepage-third-section p{
+    padding:0px 1rem;
+    font-size:1.7rem;
+    line-height: 3rem;
+}
+
+.third-section-link-container{
+    text-align: center;
+    grid-row:2;
+    grid-column: 1/4;
+}
+
+.fourth-section{
+    background:#fdf3f4;
+    padding: 10rem;
+}
+
+.fourth-section > div{
+    width: 75%;
+    margin:auto;
+}
+
+.fourth-section h1{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.fourth-section-map-container{
+    display: flex;
+    padding: 4rem 0px;
+}
+
+.fourth-section-map{
+    padding-right: 6rem;
+}
+
+.fourth-section-map > img{
+    width:100%;
+}
+
+.fourth-section-stats-container{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.fourth-section-stats-container > div > h2{
+    font-size:8.5rem;
+}
+
+.fourth-section-stats-container > div > p{
+    font-size:2rem;
+}
+
+.fourth-section-stats-container > div > span > svg{
+    width:80%;
+    height:60%;
+    margin-left:-10px;
+}
+
+.fourth-section-link-container{
+    text-align:center
+}
+
+.fourth-section-link-container a{
+    font-size: 1.7rem;
+    color:#0f866c;
+    border-bottom: 3px #0f866c solid;
+}
+
+.fifth-section{
+    padding: 8rem 0px;
+}
+
+.fifth-section-main-container{
+    width:75%;
+    margin:auto;
+    display: flex;
+}
+
+.fifth-section-main-container > div{
+    flex:1;
+}
+
+.fifth-section-main-container > div:last-child{
+    border-left: 1px solid rgb(212, 212, 212);
+}
+
+.fifth-section-card{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    width: 65%;
+    margin:auto;
+}
+
+.fifth-section-card > img{
+    max-height: 13rem;
+}
+
+.fifth-section-card > h1{
+    font-size: 3rem;
+    padding: 3rem 0px;
+}
+
+.fifth-section-card > p{
+    font-size: 1.7rem;
+    line-height: 3rem;
+}
+
+.fifth-section-card a{
+    font-size: 2rem;
+    margin-top: 3rem;
+    padding: 1.5rem 4rem;
+    border: 2px solid #0f866c;
+    border-radius: 4rem;
+    color: var(--secondary-text-clr);
+
+    transition: all 0.3s ease;
+}
+
+.fifth-section-main-container > div:last-child > div > a{
+    background: var(--secondary-text-clr);
+    color: white;
+    border:none;
+}
+
+.fifth-section-main-container > div:last-child > div > a:hover{
+    background: var(--yellow-clr);
+}
+
+.fifth-section-card a:hover{
+    background: var(--yellow-clr);
+}
+
+.first-footer-container{
+    background:#001d2f;
+}
+
+.first-footer-container > div{
+    width: 75%;
+    margin:auto;
+    padding-top: 7rem;
+}
+
+.first-footer-container > div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.first-footer-container > div > ul{
+    margin-top: 3rem;
+}
+
+.first-footer-container li{
+    color: white;
+}
+
+.first-footer-container > div > ul > li:first-child{
+    font-size: 2rem;
+    padding: 1rem 0px;
+    color: white;
+}
+
+.first-footer-container > div > ul > li{
+    padding: 0.7rem 0px;
+    color:rgb(212, 212, 212);
+}
+
+.footer-products-list{
+    grid-row: 1/3;
+}
+
+.footer-learn-more-list{
+    grid-column: 2;
+}
+
+.footer-tools-list{
+    grid-column: 2;
+}
+
+.footer-about-list{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.footer-help-list{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.second-footer-container{
+    background: #001624;
+}
+
+.second-footer-container > div{
+    width: 75%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second-footer-container p{
+    color: rgb(212, 212, 212);
+    padding: 4rem 0px;
+}
+
+.second-footer-container > div > div{
+    display: flex;
+}
+
+.second-footer-container > div > div > a{
+    margin-right: 3rem;
+    padding: 1.5rem;
+}
+
+.footer-facebook-link{
+    background: url('../img/vpn/facebook.svg');
+    background-size: cover;
+    background-position: center;
+    height: 2rem;
+    width:2rem;
+    display: block;
+}
+
+.footer-twitter-link{
+    background: url('../img/vpn/twitter.svg');
+    background-size: cover;
+    background-position: center;
+    height: 2rem;
+    width:2rem;
+    display: block;
+}
+
+.footer-yt-link{
+    background: url('../img/vpn/youtube.svg');
+    background-size: cover;
+    background-position: center;
+    height: 2rem;
+    width:2rem;
+    display: block;
+}
+
+
+
+
+
