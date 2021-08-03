@@ -10,21 +10,22 @@
     <body>
         <main>
             <header>
-                <h1>ping</h1>
-                <h1>We are launching <span>soon!</span></h1>
+                <h1 class="logo">ping</h1>
+                <h1 class="launch-header">We are launching <span>soon!</span></h1>
                 <p>Subscribe and get notified</p>
                 <form>
-                    <input type="email" name="email">
-                    <button>Notify Me</button>
+                    <input type="email" name="email" placeholder="Your email address...">
+                    <button type="button" onclick="validateForm()">Notify Me</button>
                 </form>
+                <p id="msg"></p>
             </header>
             <section>
-                <div></div>
-                <div>
+                <div class="img-container"></div>
+                <div class="footer">
                     <div>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="icon facebook"></span>
+                        <span class="icon twitter"></span>
+                        <span class="icon insta"></span>
                     </div>
                     <p>&copy; Copyright Ping. All rights reserved.</p>
                 </div>

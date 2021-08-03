@@ -28,3 +28,198 @@ body{
     height:1px;
 }
 
+main{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    padding:4rem 0;
+}
+
+.logo{
+    font-size: 4rem;
+    display:flex;
+    flex-direction:row;
+    align-items:flex-end;
+    text-transform:uppercase;
+}
+
+.logo::after{
+    content:'';
+    display:inline;
+    width:6px;
+    height:6px;
+    background:var(--blue);
+    margin-left:2px;
+    transform:translateY(-100%);
+}
+
+.launch-header, .launch-header > span{
+    font-size:4rem;
+    color: black;
+    font-weight:600;
+}
+
+.launch-header{
+    font-weight:300;
+    color: var(--gray);
+    margin: 3rem 0 1.5rem 0;
+    letter-spacing: 2px;
+}
+
+header > p{
+    font-size:2rem;
+}
+
+header > form{
+    margin-top:3rem;
+}
+
+header > form > input{
+    border: 1px solid var(--gray);
+    border-radius: 50px;
+    font-size: 1.8rem;
+    padding: 1rem;
+    padding-left:2rem;
+    min-width:300px;
+    margin-right:1rem;
+}
+
+header > form > input:focus{
+    outline: 2px solid var(--blue-light);
+}
+
+header > form > button{
+    font-size: 1.8rem;
+    padding:1rem 5rem;
+    border-radius: 50px;
+    border:none;
+    background: var(--blue);
+    color: var(--white);
+    cursor:pointer;
+
+    transition: all 0.3s ease;
+}
+
+header > form > button:hover{
+    background: var(--blue-dark);
+}
+
+#msg{
+    margin-top:2rem;
+    font-size: 2rem;
+}
+
+.invalid{
+    color:hsl(354, 100%, 66%);
+}
+
+.valid{
+    color:rgb(2, 212, 107);
+}
+
+section{
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+section > .img-container{
+    flex-grow:1;
+    background: url('../img/fm_ping/illustration-dashboard.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height:400px;
+}
+
+section > .footer{
+    padding: 3rem;
+    text-align: center;
+}
+
+section > .footer > div{
+    display: flex;
+    width:max-content;
+    margin: auto;
+}
+
+.icon{
+    width:25px;
+    height:25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-right:2rem;
+    cursor: pointer;
+}
+
+.icon:hover{
+    filter:contrast(10%);
+}
+
+.facebook{
+    background-image: url('../img/fm_ping/facebook.png');
+}
+
+.twitter{
+    background-image: url('../img/fm_ping/twitter.png');
+}
+
+.insta{
+    background-image: url('../img/fm_ping/instagram.png');
+}
+
+
+section > .footer > p{
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width:800px){
+    *,html{
+        font-size:9px;
+    }
+
+    header > form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header > form > button{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width:400px){
+    *,html{
+        font-size:8px;
+    }
+    .logo{
+        font-size:2.5rem;
+    }
+    .logo::after{
+        width:3px;
+        height:3px;
+    }
+    .launch-header{
+        font-size: 3rem;
+    }
+    header > form{
+        width:80%;
+    }
+    header > form > input{
+        min-width: auto;
+        width:90%;
+    }
+    section > .img-container{
+        min-height: auto;
+    }
+}
