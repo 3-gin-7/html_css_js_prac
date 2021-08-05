@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --drk-purple:hsl(257, 40%, 49%);
+    --white: white;
+    --lgt-purple:hsl(300, 69%, 71%);
+    --trade-bg:hsl(300, 100%, 67%) linear-gradient(50deg, hsl(257, 48%, 55%), hsl(300, 38%, 57%) );
+}
+
+*,html{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-size:10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    background: var(--drk-purple);
+}
+
+main{
+    height:100%;
+    min-height: 100vh;
+    background-image: url('../img/fm_huddle/bg-desktop.svg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    padding: 3% 5% 2% 5%;
+
+}
+
+section{
+    display: flex;
+    flex-direction:row;
+    margin-top:5rem;
+}
+
+.section-right{
+    color: var(--white);
+    padding-left: 6rem;
+    padding-top:4rem;
+}
+
+.section-right > h1, .section-right > h1 >span{
+    font-size: 4.5rem;
+}
+
+.section-right > p{
+    font-size: 1.9rem;
+    font-weight:400;
+}
+
+.section-right > button{
+    font-size: 1.5rem;
+    font-weight:400;
+    color: var(--drk-purple);
+    border:none;
+    border-radius: 50px;
+    padding: 1.5rem 6rem;
+    margin-top: 3rem;
+    cursor:pointer;
+    box-shadow: 0 5px 10px rgb(63, 63, 63);
+
+    transition: all 0.3s ease;
+}
+
+.section-right > button:hover{
+    color: var(--white);
+    background: var(--lgt-purple);
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer > div{
+    display: flex;
+}
+
+footer > div > .icon:not(:last-child){
+    margin-right:1rem;
+}
+
+.icon{
+    border: 1px solid white;
+    background-position: center;
+    background-size: cover;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor:pointer;
+}
+
+.icon:hover{
+    border: 1px solid var(--lgt-purple);
+}
+
+.icon > img{
+    height:50%;
+    filter:invert(100%);
+}
+
+@media screen and (max-width:1200px){
+    main{
+        background-image: url('../img/fm_huddle/bg-mobile.svg');
+        padding: 5%;
+    }
+    section{
+        flex-direction:column;
+        align-items: center;
+    }
+    section > div{
+        text-align: center;
+    }
+    .section-left > img{
+        width:90%;
+        margin:auto;
+    }
+    .section-right{
+        padding:0;
+    }
+    footer{
+        margin-top:3rem;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:800px){
+    *,html{
+        font-size:9px;
+    }
+    header > img{
+        height:50%;
+    }
+    .section-right > button{
+        width: 50%;
+        padding: 1.5rem 0;
+    }
+}
+
+@media screen and (max-width:500px){
+    *,html{
+        font-size:7px;
+    }
+}
+
+@media screen and (max-width:400px){
+    *,html{
+        font-size:6px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        flex-grow: 1;
+        align-items: flex-end;
+    }
+    .section-right > p{
+        margin-top: 3rem;
+        font-size: 2.6rem;
+    }
+}
+
