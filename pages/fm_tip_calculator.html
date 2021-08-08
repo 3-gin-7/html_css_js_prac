@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../accets/css/fm_tip_calculator.css">
+    <script src="../accets/js/fm_tip_calculator/index.js"></script>
+</head>
+<body>
+    <main>
+        <div class="main-container">
+            <h1>spli<br>tter</h1>
+            <div class="calc-card">
+                <section class="input-section">
+                    <div class="bill-container">
+                        <div>
+                            <label for="">Bill</label>
+                            <p class="msg" id="bill-err"></p>
+                        </div>
+                        <i class="material-icons icon">attach_money</i>
+                        <input data-type="decimal" oninput="setBillTotal(this.value)" name="bill-total" type="number">
+                    </div>
+                    <div class="tip-container">
+                        <label>Select Tip %</label>
+                        <div class="button-container">
+                            <button data-button="5" onclick="setTip(5)">5%</button>
+                            <button data-button="10" onclick="setTip(10)">10%</button>
+                            <button data-button="15" onclick="setTip(15)">15%</button>
+                            <button data-button="25" onclick="setTip(25)">25%</button>
+                            <button data-button="50" onclick="setTip(50)">50%</button>
+                            <input data-type="decimal" oninput="setCustomTip(this.value)" name="custom-tip" type="number" placeholder="Custom">
+                        </div>
+                    </div>
+                    <div class="people-container">
+                        <div>
+                            <label>Number of people</label>
+                            <p class="msg" id="ppl-err"></p>
+                        </div>
+                        <i class="material-icons icon">person</i>
+                        <input oninput="setPeople(this.value)" name="number_of_ppl" type="number">
+                    </div>
+                </section>
+                <section class="output-section">
+                    <div class="output-container">
+                        <div>
+                            <div>
+                                <p class="output-heading">Tip Amount</p>
+                                <p class="per-person">/ person</p>
+                            </div>
+                            <p id="output-tip-per-person" class="output">$0.00</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="output-heading">Total</p>
+                                <p class="per-person">/ person</p>
+                            </div>
+                            <p id="output-total-per-person" class="output">$0.00</p>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button onclick="calc()" class="reset-btn">reset</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
